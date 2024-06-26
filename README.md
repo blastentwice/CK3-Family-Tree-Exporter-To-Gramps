@@ -1,7 +1,7 @@
 
 
 # CK3-Family-Tree-Exporter-To-Gramps
-Neat GUI program to create CK3 Family Trees in Gramps.
+Neat GUI program to create CK3 Family Trees in Gramps. Working as of CK3 version 1.12
 
 ![ck3gramps](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps/assets/81999440/8c5f124d-1d37-4086-95a4-e53048ad3376)
 

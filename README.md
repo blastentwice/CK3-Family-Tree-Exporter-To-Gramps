@@ -6,8 +6,8 @@ Neat GUI program to create CK3 Family Trees in Gramps.
 ![ck3gramps](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps/assets/81999440/8c5f124d-1d37-4086-95a4-e53048ad3376)
 
 ## Introduction
-I remade the original CK3 Family Tree Exporter with a nice user interface. Now using [rakaly cli](https://github.com/rakaly/cli) 
-conversions and [jq](https://jqlang.github.io/jq/) for JSON processing. It is compatible with Ironman saves. Mod save support may be added upon request.
+I remade the [original CK3 Family Tree Exporter](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps-old) with a nice user interface. Now using [rakaly cli](https://github.com/rakaly/cli) 
+and [jq](https://jqlang.github.io/jq/) for JSON processing. It is compatible with Ironman saves. Mod save support may be added upon request.
 
 ## Installation
 Windows binaries are available on the [release](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps/releases) page.

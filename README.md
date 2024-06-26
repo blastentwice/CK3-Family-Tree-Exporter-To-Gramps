@@ -19,7 +19,7 @@ binary which is used for the JSON conversion step. After that install from requi
 ## Usage
 1. Download the CK3 Family Tree Exporter.
 2. Download [Gramps](https://gramps-project.org/blog/download/).
-3. Open the program. Set your CK3 Game path ( C:/Program Files (x86)/Steam/steamapps/common/Crusader Kings III)
+3. Open the program "ck3_gramps". Set your CK3 Game path ( C:/Program Files (x86)/Steam/steamapps/common/Crusader Kings III)
 4. and save data. JSON path should be set AFTER generating it (it will be automatically added after generation as well).
 4. Convert your save file to JSON.
 4. Convert to CSV. Requires you to provide the path to your JSON and a character ID from a dynasty you want the tree from. 

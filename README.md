@@ -3,12 +3,15 @@
 # CK3-Family-Tree-Exporter-To-Gramps
 Neat GUI program to create CK3 Family Trees in Gramps.
 
+![ck3gramps](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps/assets/81999440/8c5f124d-1d37-4086-95a4-e53048ad3376)
+
 ## Introduction
 I remade the original CK3 Family Tree Exporter with a nice user interface. Now using [rakaly cli](https://github.com/rakaly/cli) 
 conversions and [jq](https://jqlang.github.io/jq/) for JSON processing. 
 
 ## Installation
-Windows users can use the binaries on the [release]() page.
+Windows binaries are available on the [release]() page.
+
 ### Python
 You will need to download the latest [rakaly cli](https://github.com/rakaly/cli) and [jq](https://jqlang.github.io/jq/) 
 binary which is used for the JSON conversion step. After that install from requirements.txt.
@@ -27,5 +30,5 @@ binary which is used for the JSON conversion step. After that install from requi
 7. All path configurations will be saved to config.ini.
 
 ## Community
-Join the [Discord Server]()
+Join the [Discord Server](https://discord.gg/cq8rfkdyjQ)
 

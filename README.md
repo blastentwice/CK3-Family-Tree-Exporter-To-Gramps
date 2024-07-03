@@ -10,9 +10,11 @@ I remade the [original CK3 Family Tree Exporter](https://github.com/blastentwice
 and [jq](https://jqlang.github.io/jq/) for JSON processing. It is compatible with Ironman saves. Mod save support may be added upon request.
 
 ## Installation
-Windows binaries are available on the [release](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps/releases) page.
 
-### Python
+### Windows
+Windows binaries are available on the [release](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps/releases) page. 
+
+### Use through Python
 You will need to download the latest [rakaly cli](https://github.com/rakaly/cli) and [jq](https://jqlang.github.io/jq/) 
 binary which is used for the JSON conversion step. After that install from requirements.txt.
 

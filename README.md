@@ -16,7 +16,7 @@ Windows binaries are available on the [release](https://github.com/blastentwice/
 
 ### Use through Python
 You will need to download the latest [rakaly cli](https://github.com/rakaly/cli) and [jq](https://jqlang.github.io/jq/) 
-binary which is used for the JSON conversion step. After that install from requirements.txt.
+binary which is used for the JSON conversion step. Rename the jq file to "jq" from whatever name it was. After that install from requirements.txt.
 
 ## Usage
 1. Download the CK3 Family Tree Exporter.

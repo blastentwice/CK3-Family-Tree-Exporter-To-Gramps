@@ -31,6 +31,9 @@ binary which is used for the JSON conversion step. Rename the jq file to "jq" fr
 6. Import the created CSV file to Gramps using the instructions found [here](https://gramps-project.org/wiki/index.php/Gramps_5.1_Wiki_Manual_-_Manage_Family_Trees:_CSV_Import_and_Export#Import).
 7. All path configurations will be saved to config.ini.
 
+## Known Problems
+If the JSON conversion fails or returns an error message. Check [rakaly cli](https://github.com/rakaly/cli) and download the latest rakaly file and replace it. This should fix most issues.
+
 ## Community
 Join the [Discord Server](https://discord.gg/cq8rfkdyjQ)
 

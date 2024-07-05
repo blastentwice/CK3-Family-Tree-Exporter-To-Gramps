@@ -12,10 +12,10 @@ and [jq](https://jqlang.github.io/jq/) for JSON processing. It is compatible wit
 ## Installation
 
 ### Windows
-Windows binaries are available on the [release](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps/releases) page. 
+For Windows users, you can use the program all setup on the [release](https://github.com/blastentwice/CK3-Family-Tree-Exporter-To-Gramps/releases) page. 
 
 ### Use through Python
-You will need to download the latest [rakaly cli](https://github.com/rakaly/cli) and [jq](https://jqlang.github.io/jq/) 
+You will need python 3.12 or higher installed, and download the latest [rakaly cli](https://github.com/rakaly/cli) and [jq](https://jqlang.github.io/jq/) 
 binary which is used for the JSON conversion step. Rename the jq file to "jq" from whatever name it was. After that install from requirements.txt.
 
 ## Usage

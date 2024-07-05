@@ -41,8 +41,13 @@ class ConversionWorker(QThread):
         try:
             if self.conversion_type == 'json':
                 self.log.emit("\nStarting conversion to JSON...")
-                lt.to_json(self.input_file, self.output_file)
-                self.log.emit("JSON conversion completed.")
+                stderr = lt.to_json(self.input_file, self.output_file)
+                if stderr is None:
+                    self.log.emit("JSON conversion completed.")
+                    self.finished.emit(True, self.output_file)
+                else:
+                    self.error.emit(stderr)
+                    self.finished.emit(False, "")
 
             else:
                 self.log.emit("\nLoading game data...")
@@ -50,8 +55,8 @@ class ConversionWorker(QThread):
                 self.log.emit("Processing character data...")
                 chr.char_main(data, yaml_data, self.main_id, self.output_file)
                 self.log.emit("\nCSV conversion completed.")
+                self.finished.emit(True, self.output_file)
 
-            self.finished.emit(True, self.output_file)
         except Exception:
             error_info = traceback.format_exc()
             self.error.emit(error_info)

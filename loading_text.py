@@ -18,7 +18,11 @@ def to_json(save_path: str,json_path: str) :
         'dynasties: .dynasties.dynasty_house, characters: (.living + .dead_unprunable + '
         f'.characters.dead_prunable),religion: .religion.faiths, culture: .culture_manager.cultures}}" > "{json_path}"'
     )
-    subprocess.run(command, shell=True)
+    result = subprocess.run(command, shell=True, stderr = subprocess.PIPE, text=True)
+    stderr = result.stderr
+
+    if stderr:
+        return stderr
     return print(f'JSON Created in {json_path}')
 
 

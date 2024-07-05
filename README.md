@@ -32,7 +32,7 @@ binary which is used for the JSON conversion step. Rename the jq file to "jq" fr
 7. All path configurations will be saved to config.ini.
 
 ## Known Problems
-If the JSON conversion fails or returns an error message. Check [rakaly cli](https://github.com/rakaly/cli) and download the latest rakaly file and replace it. This should fix most issues.
+Latest version of rakaly not working for Game version 1.12. If the JSON conversion fails or returns an error message, use the older [version]([https://github.com/rakaly/cli](https://github.com/rakaly/cli/releases/tag/v0.5.0)) here and replace it.
 
 ## Community
 Join the [Discord Server](https://discord.gg/cq8rfkdyjQ)

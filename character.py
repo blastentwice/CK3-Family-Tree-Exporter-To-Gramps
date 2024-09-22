@@ -101,11 +101,19 @@ class Character():
 
         non_members = []
         for non_member in cls.non_dyn_children:
-            character = Character(non_member, data['characters'][non_member], data,dyn_flag=False)
-            non_members.append(character)
+            try:
+                character = Character(non_member, data['characters'][non_member], data,dyn_flag=False)
+                non_members.append(character)
+            except KeyError:
+                print(f'Character ID {non_member} is skipped')
+                continue
         for non_member in cls.non_dyn_spouse:
-            character = Character(non_member, data['characters'][non_member], data,dyn_flag=False, non_dyn_spouse= True)
-            non_members.append(character)
+            try:
+                character = Character(non_member, data['characters'][non_member], data,dyn_flag=False, non_dyn_spouse= True)
+                non_members.append(character)
+            except KeyError:
+                print(f'Character ID {non_member} is skipped')
+                continue
 
 
         return non_members
@@ -323,7 +331,6 @@ def char_main(data: dict, yaml_data: dict, main_id: str, csv_path: str):
     # add dyn spouses with no kids marriage for csv.
     for hist in history:
         hist.spouse_no_kids()
-
     non_member = Character.add_non_dynasty(data)
     history.extend(non_member)
     Character.add_marriage_id()

@@ -46,7 +46,7 @@ class Load:
         self.processed_yml = []
         self.processed_traits =[]
 
-    def get_loc_path(self, local_lang='english'):
+    def get_loc_path(self, local_lang='english', get_traits = False):
 
         """Localization only supports english currently. Search if all localization paths are correct and add
         them into a list for processing. The YAML files are non and requires some corrections"""
@@ -63,6 +63,9 @@ class Load:
             folder_path / f'titles_l_{local_lang}.yml',
             * (folder_path / 'religion').iterdir()
         ]
+
+        if get_traits is True:
+            loc_path.append(folder_path / f'traits_l_{local_lang}.yml')
 
         if all(file.is_file() for file in loc_path):
             self.loc_path = loc_path
@@ -92,10 +95,10 @@ class Load:
                         value = value.replace('#', '|').replace(':', '-').rstrip() + '\n'
                         cleaned_lines.append(f"{key.split(':', 1)[0]}: \"{value}")
 
-     #         if 'traits_l' in str(yaml_path):
-     #               cleaned_lines = [line.replace('trait_', '') for line in cleaned_lines if "_desc:" not in line
-     #                              and "_character_desc" not in line and 'trait_' in line]
-     #               self.processed_traits.extend(cleaned_lines)
+                if 'traits_l' in str(yaml_path):
+                    cleaned_lines = [line.replace('trait_', '') for line in cleaned_lines if "_desc:" not in line
+                                    and "_character_desc" not in line and 'trait_' in line]
+                    self.processed_traits.extend(cleaned_lines)
 
                 if cleaned_lines:
                     corrected_yaml = ''.join(cleaned_lines)
@@ -164,6 +167,8 @@ class Load:
 
             with processed_yml_file.open('w', encoding='utf-8-sig') as w:
                 json.dump(yaml_data, w)
+            with processed_yml_file.open(encoding='utf-8-sig') as r:
+                yaml_data = json.load(r)
 
             with json_file.open(encoding='utf-8-sig') as r:
                 data = json.load(r)
